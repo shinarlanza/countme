@@ -138,7 +138,8 @@ def main(_argv):
         # if crop flag is enabled, crop each detection and save it as new image
         if FLAGS.crop:
             crop_rate = 150 # capture images every so many frames (ex. crop photos every 150 frames)
-            crop_path = os.path.join(os.getcwd(), 'detections', 'crop', video_name)
+            crop_path = os.path.join(os.getcwd(), 'detections', video_name)
+            #crop_path = os.path.join(os.getcwd(), 'detections', 'crop', video_name)
             try:
                 os.mkdir(crop_path)
             except FileExistsError:
